@@ -53,7 +53,7 @@ if(window.innerWidth>=1024){
   },{passive:true});
 }
 
-const elementosRevelar=document.querySelectorAll('.revelar-de-baixo,.revelar-da-esquerda,.revelar-da-direita, .item-galeria-midia');
+const elementosRevelar=document.querySelectorAll('.revelar-de-baixo,.revelar-da-esquerda,.revelar-da-direita, .item-galeria-midia, .item-fotografia');
 const observadorIntersecao=new IntersectionObserver(entradas=>{
   entradas.forEach(entrada=>{
     if(entrada.isIntersecting){
@@ -65,19 +65,6 @@ const observadorIntersecao=new IntersectionObserver(entradas=>{
   });
 },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
 elementosRevelar.forEach(elemento=>observadorIntersecao.observe(elemento));
-
-const imagensPortfolio=document.querySelectorAll('.item-fotografia');
-const observadorPortfolio=new IntersectionObserver(entradas=>{
-  entradas.forEach(entrada=>{
-    if(entrada.isIntersecting){
-      const atraso=parseInt(entrada.target.dataset.delay)||0;
-      entrada.target.style.transitionDelay=atraso+'ms';
-      requestAnimationFrame(()=>requestAnimationFrame(()=>entrada.target.classList.add('visivel-na-tela')));
-      observadorPortfolio.unobserve(entrada.target);
-    }
-  });
-},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
-imagensPortfolio.forEach(galeria=>observadorPortfolio.observe(galeria));
 
 const carrosseisGaleria = document.querySelectorAll('.carrossel-imagens');
 carrosseisGaleria.forEach(carrossel => {
