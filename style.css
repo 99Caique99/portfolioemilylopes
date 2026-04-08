@@ -548,10 +548,10 @@
     width:100%;padding-top:2rem;
     display:flex;flex-direction:column;align-items:center;gap:1rem;
   }
-  .texto-direitos{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(110,100,86,.4)}
-  .creditos-desenvolvedor{font-size:.85rem;font-weight:500;color:var(--dourado);letter-spacing:.2em;margin-top:.8rem}
-  .creditos-desenvolvedor a{color:var(--marfim);text-transform:uppercase;font-weight:600;text-decoration:none;border-bottom:1px solid var(--dourado);padding-bottom:2px;transition:all var(--animacao-padrao)}
-  .creditos-desenvolvedor a:hover{color:var(--dourado-claro);border-color:var(--dourado-claro)}
+  .texto-direitos{font-size:.55rem;letter-spacing:.10em;text-transform:uppercase;color:rgba(110,100,86,.4)}
+ .creditos-desenvolvedor{font-size:.65rem;font-weight:400;color:rgba(201,168,124,.8);letter-spacing:.15em;margin-top:.5rem}
+.creditos-desenvolvedor a{color:rgba(242,237,227,.8);text-transform:uppercase;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(201,168,124,.3);padding-bottom:1px;transition:all var(--animacao-padrao)}
+.creditos-desenvolvedor a:hover{color:var(--dourado-claro);border-color:var(--dourado-claro)}
 
   .revelar-de-baixo{opacity:0;transform:translateY(60px) scale(0.95);transition:all 1.2s var(--animacao-suave)}
   .revelar-de-baixo.visivel-na-tela{opacity:1;transform:translate(0,0) scale(1)}
